@@ -149,7 +149,7 @@ where id = (select top 1 DepartmentId
 			  group by DepartmentId, salary
 			  order by salary desc)
 
-select DepartmentId, salary  
+select top 1 DepartmentId, salary  
         from employee 
 		group by DepartmentId, salary
 		order by salary desc
