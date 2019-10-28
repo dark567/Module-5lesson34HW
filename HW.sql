@@ -144,7 +144,7 @@ where  a.salary = ( select max(salary) from sum_salary )
 
 select id
 from Department 
-where id = (select top 1 DepartmentId, salary  
+where id = (select top 1 DepartmentId 
               from employee 
 			  group by DepartmentId, salary
 			  order by salary desc)
