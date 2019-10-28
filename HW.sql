@@ -118,7 +118,7 @@ join Employee emB on emB.Id = em.ChiefId and emB.Salary < em.Salary
 select dep.name, count(DepartmentId) from Department dep
 join Employee em on em.DepartmentId = dep.Id
 group by dep.name, DepartmentId
-having count(DepartmentId)>3
+having count(DepartmentId)<=3
 
 /*4 ¬ывести список сотрудников, получающих максимальную заработную плату в своем отделе*/
 select em.name, em.Salary
